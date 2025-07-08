@@ -1,4 +1,4 @@
-#Requirements Text A
+# Requirements Text A
 
 The Production Line Management System (PLMS) enables a line worker, quality inspector, and production manager to trace the production processes, hold the quality level, and ensure fluent production. The system will trace production activities, solve the problems that emerged, and update statuses in real time for maximally effective operation.
 Line workers operate machines, assemble pieces of a product, and generally supervise the production line. At the start of every shift, they log in to the PLMS and update their production in the system. They report any malfunction of a machine or lack of a particular material, which gets passed to the quality inspectors or production managers.
