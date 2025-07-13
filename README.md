@@ -1,15 +1,12 @@
 # Welcome to Req2UseCase!
 
-This project is part of the study ***Leveraging Large Language Models for Use Case Model Generation from Software Requirements***. The repository contains the application used in the experiments with software engineers. It includes both the frontend and the sequence of steps, as well as the `serverGPU.py` file, which contains the Python script running on the GPU server using Llama3.1:70b through Ollama. The `proxyFile.py` file contains the proxy logic layer used to communicate between the frontend and the GPU server. All the prompts created and utilized for this project can be found in the file `Prompts.txt`.
+This project is part of the study ***Leveraging Large Language Models for Use Case Model Generation from Software Requirements***. The repository contains the application used in the experiments with software engineers. It includes both the frontend and the sequence of steps and the `serverGPU.py` file, which contains the Python script running on the GPU server using Llama3.1:70b through Ollama. The `proxyFile.py` file includes the proxy logic layer used to communicate between the frontend and the GPU server. All the prompts created and utilized for this project can be found in the file `Prompts.txt`. Additionally, the Requirements A and B Text used in the Experiments can be found in `RequirementsTextA.md` and `RequirementsTextB.md`
 
 ## Development
 
 ### Prerequisites
 
 Ensure you have the following prerequisites before starting development:
-
-- Node.js (Version 14 or higher)
-- npm (Version 6 or higher)
 - Python (Version 3.8 or higher)
 - Access to a GPU server with Ollama and Llama3.1:70b installed
 
