@@ -1,6 +1,32 @@
 # Welcome to Req2UseCase!
 
-This project is part of the study ***Leveraging Large Language Models for Use Case Model Generation from Software Requirements***. The repository contains the proposed method evaluated in experiments with software engineers. It includes both the frontend and the sequence of steps and the [`serverGPU.py`](app/serverGPU.py) file, which contains the Python script running on the GPU server using Llama3.1:70b. The [`proxyFile.py`](app/proxyFile.py) file includes the proxy logic layer used to communicate between the frontend and the GPU server. All the prompts created and utilized for this project can be found in the file [`prompts.txt`](prompts.txt). Additionally, the Requirements Texts A and B used in the experiments can be found in [`requirements-a.md`](requirements-a.md) and [`requirements-b.md`](requirements-b.md). These results from each approch for every particaipant can be found [here](models/results/).
+This repository supports the study:  
+***Leveraging Large Language Models for Use Case Model Generation from Software Requirements***.  
+
+It contains the implementation of the proposed method and the results from the experiment with software engineers.  
+
+## Repository Structure  
+
+### 📦 Application ([app](app))  
+- **Frontend** – User interface for interacting with the system.  
+- **[`serverGPU.py`](app/serverGPU.py)** – Python script running on the GPU server with **Llama 3.1 70B**.  
+- **[`proxyFile.py`](app/proxyFile.py)** – Proxy logic layer that handles communication between the frontend and the GPU server.  
+
+### 🧾 Prompts  
+- **[`prompts.txt`](prompts.txt)** – Contains all prompts designed and used in the study.  
+
+### 📑 Requirements Texts  
+- **[`requirements-a.md`](requirements-a.md)** – Requirements Text A.  
+- **[`requirements-b.md`](requirements-b.md)** – Requirements Text B.  
+
+### 📊 Results ([models/results](models/results/))  
+- **`llm-approach/`** – Results generated with the LLM-based approach.  
+- **`manual-approach/`** – Results created manually by participants.  
+- Both subfolders contain the results for every participant.  
+
+### ✅ Ground Truth ([models/ground-truth](models/ground-truth/))  
+- Contains the validated ground-truth use case models for both requirements texts.  
+
 
 ## Development
 
