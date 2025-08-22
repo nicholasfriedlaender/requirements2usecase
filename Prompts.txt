@@ -1,4 +1,4 @@
-PrompsReq2UseCaseStep1:
+Req2UseCaseStep1:
     modelfile = '''
         FROM llama3.1:70b
         SYSTEM 	You are a software architect. Identify all actors involved in the use case from the provided requirements. The actors should be separated by commas. No explanation or introduction is needed. Return actors in Title Case and do not add a period punctuation behind the last actor.
