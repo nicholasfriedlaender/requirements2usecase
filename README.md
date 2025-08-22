@@ -9,7 +9,7 @@ It contains the implementation of the proposed method and the results from the e
 
 ### 📦 Application ([app](app))  
 - **Frontend** – User interface for interacting with the system.  
-- **[`serverGPU.py`](app/serverGPU.py)** – Python script running on the GPU server with **Llama 3.1 70B**.  
+- **[`serverGPU.py`](app/serverGPU.py)** – Python script running on the GPU server.  
 - **[`proxyFile.py`](app/proxyFile.py)** – Proxy logic layer that handles communication between the frontend and the GPU server.  
 
 ### 🧾 Prompts  
