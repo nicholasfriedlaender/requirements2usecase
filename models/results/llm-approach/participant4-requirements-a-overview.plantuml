@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+skinparam shadowing false
+actor :Line Workers: as lineWorkers
+actor :Quality Inspectors: as qualityInspectors
+actor :Production Managers: as productionManagers
+
+rectangle ProductionLineManagementSystem {
+  usecase "Log into the System" as logIntoSystem
+  usecase "Update Progress" as updateProgress
+  usecase "Report Equipment Malfunctions or Material Shortages" as reportIssues
+  usecase "Check Product Quality" as checkProductQuality
+  usecase "Examine Items based on Quality Criteria" as examineItems
+  usecase "Halt Production Line or Flag Batch for Rework" as haltProduction
+  usecase "Conduct Assessments" as conductAssessments
+  usecase "Manage Production Scheduling" as manageScheduling
+  usecase "Allocate Resources" as allocateResources
+  usecase "Respond to Reports from Line Workers and Quality Inspectors" as respondToReports
+  usecase "Adjust Production Schedules" as adjustSchedules
+
+  lineWorkers --> logIntoSystem
+  lineWorkers --> updateProgress
+  lineWorkers --> reportIssues
+
+  qualityInspectors --> checkProductQuality
+  qualityInspectors --> examineItems
+  qualityInspectors --> haltProduction
+  qualityInspectors --> conductAssessments
+
+  productionManagers --> manageScheduling
+  productionManagers --> allocateResources
+  productionManagers --> respondToReports
+  productionManagers --> adjustSchedules
+}
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+skinparam shadowing false
+
+actor :Nurses: as nurses
+actor :Doctors: as doctors
+
+rectangle HospitalPatientManagementSystem {
+  usecase "Log Into The System" as logIntoTheSystem
+  usecase "Update Patient Information" as updatePatientInfo
+  usecase "Report Changes In Patient Conditions" as reportChanges
+  usecase "Manage Medication Administration" as manageMedication
+  usecase "Receive Notifications Regarding Reported Changes In PatientStatus" as receiveNotifications
+  usecase "Review And Respond To Updates On Patient Conditions" as reviewAndRespond
+  usecase "Issue Urgent Care Directives" as issueDirectives
+  usecase "Make Real Time Adjustments To Treatment Plans" as makeAdjustments
+
+  nurses --> logIntoTheSystem
+  nurses --> updatePatientInfo
+  nurses --> reportChanges
+  nurses --> manageMedication
+
+  doctors --> receiveNotifications
+  doctors --> reviewAndRespond
+  doctors --> issueDirectives
+  doctors --> makeAdjustments
+
+  reportChanges .> receiveNotifications : includes
+  receiveNotifications .> reviewAndRespond : extends
+}
+@enduml

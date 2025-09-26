@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+skinparam shadowing false
+
+actor :Line Workers: as LineWorkers
+actor :Quality Inspectors: as QualityInspectors
+actor :Production Managers: as ProductionManagers
+
+rectangle ProductionLineManagementSystem {
+  usecase (Log in) as UC_LogIn
+  usecase (Update progress) as UC_UpdateProgress
+  usecase (Report equipment malfunctions or material shortages) as UC_ReportIssues
+  usecase (Check product quality) as UC_CheckQuality
+  usecase (Conduct assessments) as UC_ConductAssessments
+  usecase (Halt production line or flag batch for rework) as UC_HaltProduction
+  usecase (Adjust production schedules) as UC_AdjustSchedules
+  usecase (Allocate resources) as UC_AllocateResources
+  usecase (Respond to reports from line workers and quality inspectors) as UC_RespondReports
+
+  LineWorkers --> UC_LogIn
+  LineWorkers --> UC_UpdateProgress
+  LineWorkers --> UC_ReportIssues
+
+  QualityInspectors --> UC_CheckQuality
+  QualityInspectors --> UC_ConductAssessments
+  QualityInspectors --> UC_HaltProduction
+
+  ProductionManagers --> UC_AdjustSchedules
+  ProductionManagers --> UC_AllocateResources
+  ProductionManagers --> UC_RespondReports
+
+  UC_ReportIssues .> UC_ConductAssessments : includes
+}
+
+@enduml

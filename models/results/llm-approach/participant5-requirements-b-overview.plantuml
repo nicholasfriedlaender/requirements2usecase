@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+skinparam shadowing false
+
+actor :Nurses: as nurses
+actor :Doctors: as doctors
+rectangle HospitalPatientManagementSystem {
+  usecase "Log into HPMS to access patient records" as login
+  usecase "Update patient records" as updateRecords
+  usecase "Report changes in patient conditions" as reportChanges
+  usecase "Manage patient treatment plans" as manageTreatmentPlans
+  usecase "Conduct diagnoses" as conductDiagnoses
+  usecase "Prescribe treatments" as prescribeTreatments
+  usecase "Receive notifications regarding reported changes in patient status." as receiveNotifications
+}
+
+nurses --> login
+nurses --> updateRecords
+nurses --> reportChanges
+
+doctors --> manageTreatmentPlans
+doctors --> conductDiagnoses
+doctors --> prescribeTreatments
+doctors --> receiveNotifications
+doctors --> login
+
+reportChanges .> receiveNotifications : includes
+
+@enduml
