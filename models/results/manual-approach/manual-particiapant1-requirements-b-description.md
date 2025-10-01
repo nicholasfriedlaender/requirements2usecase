@@ -1,26 +1,23 @@
-# Participant 2 - Use Case Descriptions
+# Participant 1 - Use Case Descriptions
 
-## Report Equipment Malfunctions
-**Actor:** Line Worker  
-
-**Description:**  
-Line workers create reports about errors, bugs, etc. in the system, which are then forwarded to the production manager.  
-
-**Main Flow:**
-1. View monitoring system  
-2. Understand the problem  
-3. Create report  
-4. Submit report  
-
----
-
-## Manage Production Scheduling
-**Actor:** Production Manager  
+## Update Patient Data
+**Actor:** Nurse  
 
 **Description:**  
-As a production manager, he has the authority to schedule and adjust the production to better manage delays and issues.  
+Nurses can log in with their credentials into the HPMS to get access to all available functionality.  
 
-**Main Flow:**
-1. Read the report  
-2. React to reports  
-3. Adjust production schedules  
+**Steps:**
+1. Nurse launches the HPMS  
+2. Nurse enters their credentials  
+3. Nurse gets access to the records/tools  
+
+## Manage Treatment Plans
+**Actor:** Doctor  
+
+**Description:**  
+Doctors can view and edit treatment plans on a per-patient basis.  
+
+**Steps:**
+1. Doctor chooses which patient treatment plan to review  
+2. Doctor makes the necessary adjustments  
+3. Doctor saves the treatment plan  
