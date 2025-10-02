@@ -1,0 +1,32 @@
+@startuml
+left to right direction
+skinparam packageStyle rect
+skinparam shadowing false
+
+actor :Line Workers: as LineWorkers
+actor :Quality Inspectors: as QualityInspectors
+actor :Production Managers: as ProductionManagers
+
+rectangle ProductionLineManagementSystem {
+  usecase "Log in to the PLMS at shift start" as Login
+  usecase "Update production progress" as UpdateProgress
+  usecase "Report equipment malfunctions or material shortages" as ReportIssues
+  usecase "Conduct assessments of reported issues" as ConductAssessments
+  usecase "Halt production line" as HaltProduction
+  usecase "Flag batch for rework" as FlagRework
+  usecase "Respond to reports from Line Workers and Quality Inspectors" as RespondReports
+  usecase "Adjust production schedules due to issues or delays" as AdjustSchedules
+
+  LineWorkers --> Login
+  LineWorkers --> UpdateProgress
+  LineWorkers --> ReportIssues
+  QualityInspectors --> ConductAssessments
+  QualityInspectors --> HaltProduction
+  QualityInspectors --> FlagRework
+  ProductionManagers --> RespondReports
+  ProductionManagers --> AdjustSchedules
+
+  ReportIssues .> ConductAssessments : includes
+}
+
+@enduml
